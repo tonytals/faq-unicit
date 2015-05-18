@@ -6,6 +6,7 @@
  * Version: 1.0
  * Author: Tony Galvão
  * Author URI: http://webtals.com
+ * Template Name: UNICIT-Faq
  * Text Domain: faq-unicit
  * Domain Path: faq-unicit
  * License: GPL2
@@ -13,7 +14,7 @@
 
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
-// Função que carrega arquivos de tradução
+// método que carrega arquivos de tradução
 function faq_unicit_load_textdomain() {
 
 	load_plugin_textdomain( 'faq-unicit', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
@@ -24,26 +25,7 @@ function faq_unicit_load_textdomain() {
 function faq_init(){
 	
 	$labels = array(
-					'name' 				=> __( 'FAQ UniCIT', 'faq-unicit' ),
-					'singular_name' 	=> __( 'Singular', 'faq-unicit' ),
-					'all_items'			=> __( 'All Questions', 'faq-unicit' ),
-					'add_new'			=> __( 'Add Question', 'faq-unicit' )
-				);
-
-	$args = array(
-			'public' 	=> true,
-			'labels'  	=> $labels,
-			'menu_icon' => 'dashicons-editor-help',
-			'supports' 	=> array(
-					'title',
-					'editor',
-					'author'
-				)
-		);
-		register_post_type('faq_unicit', $args);
-	
-	$labels = array(
-		'name'              => _x( 'Subject', 'faq-unicit' ),
+		'name'              => _x( 'Subjects', 'faq-unicit' ),
 		'singular_name'     => _x( 'Subject', 'faq-unicit' ),
 		'search_items'      => __( 'Search Subjects', 'faq-unicit' ),
 		'all_items'         => __( 'All Subjects', 'faq-unicit' ),
@@ -62,13 +44,77 @@ function faq_init(){
 		'show_ui'           => true,
 		'show_admin_column' => true,
 		'query_var'         => true,
-		'rewrite'           => array( 'slug' => 'genre' ),
+		'rewrite'           => array( 'slug' => 'subjects' ),
 	);
 
-	register_taxonomy( 'genre', array( 'faq_unicit' ), $args );
+	register_taxonomy( 'subjects', array( 'faq_unicit' ), $args );
 
+
+	$labels = array(
+			'name' 		    => __( 'FAQ UniCIT', 'faq-unicit' ),
+			'singular_name' => __( 'Singular', 'faq-unicit' ),
+			'all_items'	    => __( 'All Questions', 'faq-unicit' ),
+			'add_new'	    => __( 'Add Question', 'faq-unicit' )
+	);
+
+	$args = array(
+			'public' 	 	=> true,
+			'labels'  	 	=> $labels,
+			'menu_icon'  	=> 'dashicons-editor-help',
+			'show_ui'	 	=> true,
+			'show_in_menu'  => true,
+			'query_var' => true,
+			'show_in_admin_bar' => true,
+			'show_in_nav_menus' => true,
+			'capability_type' => 'page',
+			'supports' 	 	=> array(
+					'title',
+					'editor',
+					'page-attributes',
+					'author'
+				)
+	);
+	register_post_type('faq_unicit', $args);	
 
 }
 
 add_action( 'init', 'faq_init' );
 add_action( 'plugins_loaded', 'faq_unicit_load_textdomain' );
+
+
+function faq_unicit_include_template( $template_path ) {
+    if ( get_post_type() == 'faq_unicit' ) {
+        if ( is_single() ) {
+            // checks if the file exists in the theme first,
+            // otherwise serve the file from the plugin
+            if ( $theme_file = locate_template( array ( 'single-faq_unicit.php' ) ) ) {
+                $template_path = $theme_file;
+            } else {
+                $template_path = plugin_dir_path( __FILE__ ) . '/single-faq_unicit.php';
+            }
+        }
+    }
+    return $template_path;
+}
+
+add_filter( 'template_include', 'faq_unicit_include_template', 1 );
+
+
+
+
+function faq_unicit_register_my_scripts(){
+
+    // Use `get_stylesheet_directoy_uri() if your script is inside your theme or child theme.
+    wp_register_script( 'faq-unicit', plugins_url( '/js/faq-unicit.js', __FILE__ ) );
+    wp_register_script( 'main', plugins_url( '/js/main.js', __FILE__ ) );
+    wp_register_script( 'jquery-mobile-custom', plugins_url( '/js/jquery.mobile.custom.min.js', __FILE__ ) );
+    wp_register_script( 'modernizr', plugins_url( '/js/modernizr.js', __FILE__ ) );
+
+    wp_register_style( 'style_faq_unicit', plugins_url( '/css/style.css', __FILE__ ) );
+	wp_register_style( 'reset_faq_unicit', plugins_url( '/css/reset.css', __FILE__ ) );
+
+
+}
+
+// Always use wp_enqueue_scripts action hook to both enqueue and register scripts
+add_action( 'wp_enqueue_scripts', 'faq_unicit_register_my_scripts' );
