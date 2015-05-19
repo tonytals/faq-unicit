@@ -79,7 +79,7 @@ jQuery(document).ready(function($){
 	function updateCategoryPosition() {
 		var top = $('.cd-faq').offset().top,
 			height = jQuery('.cd-faq').height() - jQuery('.cd-faq-categories').height(),
-			margin = 20;
+			margin = 40;
 		if( top - margin <= $(window).scrollTop() && top - margin + height > $(window).scrollTop() ) {
 			var leftValue = faqsCategoriesContainer.offset().left,
 				widthValue = faqsCategoriesContainer.width();
