@@ -1,4 +1,4 @@
 # faq-unicit
-Perguntas Frequentes UniCIT
+Wordpress plugin: Perguntas Frequentes 
 
-Plugin para Wordpress (F.A.Q)
+Perguntas Frequentes UniCIT (F.A.Q)
