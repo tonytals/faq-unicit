@@ -13,8 +13,10 @@ wp_enqueue_style( 'reset_faq_unicit' );
 <div id="main-content" class="main-content">
   <div id="primary" class="content-area">
     <div id="content" class="site-content" role="main">
-     <article class="post-703 page type-page status-publish hentry">
+      
+     <article class="page type-page status-publish hentry">
       <section class="cd-faq">
+        <div id="preloader"></div>
         <!-- INICIO DA MONTAGEM DO MENU -->
         <ul class="cd-faq-categories">
           <h2 class="cd-faq-title"><?php _e( 'Subject', 'faq-unicit' ) ?></h2><br/>

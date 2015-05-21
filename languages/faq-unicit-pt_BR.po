@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: faq-unicit\n"
-"POT-Creation-Date: 2015-05-13 18:05-0300\n"
-"PO-Revision-Date: 2015-05-13 19:03-0300\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2015-05-21 12:00-0300\n"
+"PO-Revision-Date: 2015-05-21 12:00-0300\n"
+"Last-Translator: Tony Galvão <webtals@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,114 +14,67 @@ msgstr ""
 "X-Poedit-SearchPath-0: C:\\xampp\\htdocs\\faq\\wp-content\\plugins\\faq-"
 "unicit\n"
 
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit-all.php:8
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit-all.php:9
-msgid "Post Type"
-msgstr ""
+#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:28
+msgid "Subjects"
+msgstr "Assunto"
 
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit-all.php:10
-msgid "Parent Item:"
-msgstr ""
+#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:29
+#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:38
+#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/single-faq_unicit.php:22
+msgid "Subject"
+msgstr "Assunto"
 
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit-all.php:11
-msgid "All Items"
-msgstr ""
-
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit-all.php:12
-msgid "Add New Item"
-msgstr ""
-
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit-all.php:13
-msgid "Add New"
-msgstr ""
-
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit-all.php:14
-msgid "New Item"
-msgstr ""
-
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit-all.php:15
-msgid "Edit Item"
-msgstr ""
-
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit-all.php:16
-msgid "Update Item"
-msgstr ""
-
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit-all.php:17
-msgid "View Item"
-msgstr ""
-
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit-all.php:18
-msgid "Search Item"
-msgstr ""
-
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit-all.php:19
-msgid "Not found"
-msgstr ""
-
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit-all.php:20
-msgid "Not found in Trash"
-msgstr ""
-
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit-all.php:23
-msgid "post_type"
-msgstr ""
-
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit-all.php:24
-msgid "Post Type Description"
-msgstr ""
-
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:39
-msgid "FAQ UniCIT"
-msgstr ""
-
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:40
-msgid "Singular"
-msgstr ""
-
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:41
-msgid "All Questions"
-msgstr "Todas Questões"
-
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:42
-msgid "Add Question"
-msgstr "Adicionar Questão"
-
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:60
+#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:30
 msgid "Search Subjects"
 msgstr ""
 
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:61
+#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:31
 msgid "All Subjects"
 msgstr "Todos Assuntos"
 
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:62
+#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:32
 msgid "Parent Subject"
 msgstr ""
 
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:63
+#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:33
 msgid "Parent Subject:"
 msgstr ""
 
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:64
+#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:34
 msgid "Edit Subject"
-msgstr ""
+msgstr "Editar"
 
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:65
+#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:35
 msgid "Update Subject"
-msgstr ""
+msgstr "Atualizar"
 
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:66
+#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:36
 msgid "Add New Subject"
-msgstr ""
+msgstr "Novo Assunto"
 
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:67
+#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:37
 msgid "New Subject Name"
 msgstr ""
 
-#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:68
-msgid "Subject"
-msgstr "Assunto"
+#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:54
+msgid "FAQ UniCIT"
+msgstr ""
+
+#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:55
+msgid "Singular"
+msgstr ""
+
+#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:56
+msgid "All Questions"
+msgstr "Todas Questões"
+
+#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:57
+msgid "Add Question"
+msgstr "Adicionar Questão"
+
+#: C:\xampp\htdocs\faq\wp-content\plugins\faq-unicit/faq-unicit.php:58
+msgid "Add New Item"
+msgstr "Nova Questão"
 
 #~ msgid "Add Category"
 #~ msgstr "Adicionar Categoria"

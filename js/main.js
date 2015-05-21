@@ -1,4 +1,10 @@
 jQuery(document).ready(function($){
+
+	$(window).load(function(){
+    	$('#preloader').fadeOut('slow',function(){$(this).remove();});
+	});
+
+
 	//update these values if you change these breakpoints in the style.css file (or _layout.scss if you use SASS)
 	var MqM= 768,
 		MqL = 1024;
