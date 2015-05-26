@@ -16,54 +16,27 @@
 *::after, *::before {
     content: "";
 }
-body {
-    background-color: #f3f3f5;
-    color: #4e5359;
-    font-family: "Open Sans",sans-serif;
-    font-size: 100%;
-}
-body::after {
-    background-color: rgba(78, 83, 89, 0.8);
-    height: 100%;
-    left: 0;
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    transition: opacity 0.3s ease 0s, visibility 0s ease 0.3s;
-    visibility: hidden;
-    width: 100%;
-}
-body.cd-overlay::after {
-    opacity: 1;
-    transition: opacity 0.3s ease 0s, visibility 0s ease 0s;
-    visibility: visible;
-}
-@media only screen and (min-width: 768px) {
-body::after {
-    display: none;
-}
-}
-a {
+.cd-faq a {
     color: #330066;
     text-decoration: none;
 }
-header {
+.cd-faq header {
     background-color: #fff;
     height: 180px;
     line-height: 180px;
     position: relative;
     text-align: center;
 }
-header h1 {
+.cd-faq header h1 {
     color: #ffffff;
     font-size: 1.25rem;
 }
 @media only screen and (min-width: 1024px) {
-header {
+.cd-faq header {
     height: 153px;
     line-height: 223px;
 }
-header h1 {
+.cd-faq header h1 {
     font-size: 2.25rem;
     font-weight: 300;
 }

@@ -85,7 +85,7 @@ add_action( 'init', 'faq_init' );
 // Após o plugin ser carregado inicie o método 'faq_unicit_load_textdomain'
 add_action( 'plugins_loaded', 'faq_unicit_load_textdomain' );
 
-//Template do FAQ
+//Plugin "acessavél" diretamente pela URL :: EM DESENVOLVIMENTO ::
 function faq_unicit_include_template( $template_path ) {
 	global $wp_query;
 	$wp_query->is_404 = false; //evitar o erro 404 quando acessar o plugin direto pela URL.
@@ -112,8 +112,8 @@ function faq_unicit_include_template( $template_path ) {
 	}    
 }
 
-//Filtro para incluir o template no plugin
-add_filter( 'template_include', 'faq_unicit_include_template', 1 );
+//Filtro para plugin fica "acessavél" diretamente pela URL  :: EM DESENVOLVIMENTO ::
+//add_filter( 'template_include', 'faq_unicit_include_template', 1 );
 
 //Registra os scripts e os estilos que serão utilizados pelo plugin
 function faq_unicit_register_my_scripts(){
@@ -130,3 +130,18 @@ function faq_unicit_register_my_scripts(){
 
 // Usar a ação wp_enqueue_scripts para enfileirar e registrar os scripts
 add_action( 'wp_enqueue_scripts', 'faq_unicit_register_my_scripts' );
+
+function faq_unicit_sc() {
+
+	ob_start();
+        if ( $theme_file = locate_template( array ( 'sc-faq_unicit.php' ) ) ) {
+			include($theme_file);
+		} else {
+			include(plugin_dir_path( __FILE__ ) . '/sc-faq_unicit.php');
+		}
+    $content = ob_get_clean();
+
+	return $content;
+}
+// Adiciona o shortcode [faq-unicit]
+add_shortcode('faq-unicit', 'faq_unicit_sc');

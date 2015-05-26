@@ -1,5 +1,6 @@
 <?php
 
+get_template_part('templates/top', 'page');
 wp_enqueue_script( 'faq-unicit' );
 wp_enqueue_script( 'jquery-mobile-custom' );
 wp_enqueue_script( 'modernizr' );
@@ -45,9 +46,9 @@ wp_enqueue_style( 'reset_faq_unicit' );
           ?> 
 
           <li>
-            <a class="cd-faq-trigger" href="#0"><?php the_title(); ?></a>
+            <a class="cd-faq-trigger" href="#0"><?php echo $post->post_title; ?></a>
             <div class="cd-faq-content">
-              <?php the_content(); ?>
+              <?php echo $post->post_content; ?>
             </div>
           </li>
         <?php endforeach; ?>
