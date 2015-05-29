@@ -133,14 +133,14 @@ add_action( 'wp_enqueue_scripts', 'faq_unicit_register_my_scripts' );
 
 function faq_unicit_sc() {
 
-	ob_start();
+	//ob_start();
         if ( $theme_file = locate_template( array ( 'sc-faq_unicit.php' ) ) ) {
-			include($theme_file);
+			$content = include($theme_file);
 		} else {
-			include(plugin_dir_path( __FILE__ ) . '/sc-faq_unicit.php');
+			$content = include(plugin_dir_path( __FILE__ ) . '/sc-faq_unicit.php');
 		}
-    $content = ob_get_clean();
-
+   // $content = ob_get_clean();
+		$content = get_template_part( $content );
 	return $content;
 }
 // Adiciona o shortcode [faq-unicit]

@@ -48,7 +48,7 @@ wp_enqueue_style( 'reset_faq_unicit' );
           <li>
             <a class="cd-faq-trigger" href="#0"><?php echo $post->post_title; ?></a>
             <div class="cd-faq-content">
-              <?php echo $post->post_content; ?>
+              <?php the_content(); ?>
             </div>
           </li>
         <?php endforeach; ?>
